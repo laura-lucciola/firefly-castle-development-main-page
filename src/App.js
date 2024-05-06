@@ -6,34 +6,35 @@ import Card from 'react-bootstrap/Card';
 
 function App() {
   return (
-        <div id='main-body' className='main-body'>
+    <div id='main-body' className='main-body'>
       <Card>
         <Card.Header>Welcome to Firefly Castle Development</Card.Header>
         <Card.Subtitle>Delivering quality since 2024</Card.Subtitle>
-        <Card.Img variant="top" src={logo} alt='Firefly Castle Development company logo' height='300px'/>
+        <Card.Img variant="top" src={logo} alt='Firefly Castle Development company logo' height='300px' />
+
         <Card.Body>
           <Card.Text>
-          We are a software consulting company specializing in cutting-edge solutions for businesses in the United Kingdom.
+            We are a software consulting company specializing in cutting-edge solutions for businesses in the United Kingdom.
           </Card.Text>
 
-          <div className="social-links">
-            <a href="https://github.com/laura-lucciola" target="_blank" rel="noopener noreferrer">
+          <div id='social-links' className="social-links">
+            <a href="https://github.com/laura-lucciola" target="_blank" rel="noopener noreferrer" id="github-link" className="social-link">
               <FontAwesomeIcon icon={faGithub} /> GitHub
             </a>
-            <a href="https://gitlab.com/laura-lucciola" target="_blank" rel="noopener noreferrer">
+            <a href="https://gitlab.com/laura-lucciola" target="_blank" rel="noopener noreferrer" id="gitlab-link" className="social-link">
               <FontAwesomeIcon icon={faGitlab} /> GitLab
             </a>
-            <a href="https://www.linkedin.com/in/laura-lucciola/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/laura-lucciola/" target="_blank" rel="noopener noreferrer" id="linkedin-link" className="social-link">
               <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
             </a>
-            <a href="https://dev.to/laura-lucciola" target="_blank" rel="noopener noreferrer">
+            <a href="https://dev.to/laura-lucciola" target="_blank" rel="noopener noreferrer" id="dev-link" className="social-link">
               <FontAwesomeIcon icon={faDev} /> Dev.to
             </a>
           </div>
         </Card.Body>
       </Card>
     </div>
-);  
+  );
 }
 
 export default App;
