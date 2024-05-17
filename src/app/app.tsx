@@ -1,12 +1,21 @@
 import './app.scss';
-import { PersonalCard } from './personal-card/personal-card';
-import { CompanyCard } from './company-card/company-card';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import NavigationBar from './navigation-bar/navigation-bar';
+import HomePage from './home-page/home-page';
+import ContactPage from './contact-page/contact-page';
 
 function App() {
     return (
-        <div id="main-body" className="main-body">
-            <CompanyCard></CompanyCard>
-            <PersonalCard></PersonalCard>
+        <div id="app-main" className="app-main">
+            <NavigationBar />
+            <div id="main-body" className="main-body">
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                    </Routes>
+                </BrowserRouter>
+            </div>
         </div>
     );
 }
