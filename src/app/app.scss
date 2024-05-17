@@ -1,15 +1,15 @@
-
 /* Center everything */
 .main-body {
   display: flex;
   flex-direction: column;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   height: 100vh;
 
   .card {
     margin: 1rem;
-    padding: 1rem; /* Add padding to all sides */
+    padding: 1rem;
+    /* Add padding to all sides */
     text-align: center;
     background-color: var(--light-primary-color);
     color: white;
@@ -19,33 +19,33 @@
     max-width: 100vh;
     max-height: 100vh;
   }
-  
+
   .card-header {
     font-size: 1.5rem;
   }
-  
+
   .card-subtitle {
     font-size: 1rem;
     color: var(--secondary-color);
   }
-  
+
   .card-img-top {
     border-radius: 10px;
   }
-  
+
   /* Social links */
   .social-links {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .social-link {
     color: var(--secondary-color);
     text-decoration: none;
     transition: color 0.3s ease;
   }
-  
+
   .social-link:hover {
     color: white;
   }

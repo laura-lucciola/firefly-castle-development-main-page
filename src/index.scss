@@ -1,16 +1,15 @@
 /* Set primary and secondary colors */
 :root {
   --background-colour: #616161;
-  --primary-color: #8a2be2; 
-  --light-primary-color:  #7b11dfb1; 
-  --secondary-color: #ffbf00; 
+  --primary-color: #8a2be2;
+  --light-primary-color: #7b11dfb1;
+  --secondary-color: #ffbf00;
 }
 
 body {
   margin: 0;
-  font-family: 'Space Mono', monospace; 
+  font-family: 'Space Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-colour);
 }
-
