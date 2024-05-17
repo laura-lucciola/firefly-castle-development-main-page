@@ -1,5 +1,5 @@
-import logo from './assets/company-logo.svg';
-import './App.css';
+import logo from '../assets/company-logo.svg';
+import './app.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGitlab, faLinkedin, faDev } from '@fortawesome/free-brands-svg-icons'; 
 import Card from 'react-bootstrap/Card';
