@@ -1,4 +1,4 @@
-import logo from './company-logo.svg';
+import logo from './assets/company-logo.svg';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGitlab, faLinkedin, faDev } from '@fortawesome/free-brands-svg-icons'; 
