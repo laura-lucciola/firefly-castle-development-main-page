@@ -1,0 +1,48 @@
+@use 'variables.scss';
+
+// $theme-colors: (
+//   primary: $primary,
+//   secondary: $secondary,
+//   terciary: $terciary,
+//   success: $success,
+//   info: $info,
+//   warning: $warning,
+//   danger: $danger,
+//   light: $light,
+//   dark: $dark,
+//   accent: $accent,
+//   background: $background,
+// );
+
+// Import Bootstrap and its default variables
+@import 'bootstrap/scss/bootstrap.scss';
+
+// :root {
+//   --background-colour: $background;
+//   --primary-color: $primary;
+//   --light-primary-color: $terciary;
+//   --secondary-color: $secondary;
+// }
+
+// body {
+//   margin: 0;
+//   font-family: 'Space Mono', monospace;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   background-color: $background;
+// }
+
+:root {
+  --background-colour: #616161;
+  --primary-color: #8a2be2;
+  --light-primary-color: #7b11dfb1;
+  --secondary-color: #ffbf00;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-colour);
+}
