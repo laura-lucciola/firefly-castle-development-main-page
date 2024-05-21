@@ -1,48 +1,75 @@
-@use 'variables.scss';
+/* custom.scss */
+@import './style/variables.scss';
+@import '~bootstrap/scss/bootstrap';
 
-// $theme-colors: (
-//   primary: $primary,
-//   secondary: $secondary,
-//   terciary: $terciary,
-//   success: $success,
-//   info: $info,
-//   warning: $warning,
-//   danger: $danger,
-//   light: $light,
-//   dark: $dark,
-//   accent: $accent,
-//   background: $background,
-// );
-
-// Import Bootstrap and its default variables
-@import 'bootstrap/scss/bootstrap.scss';
-
-// :root {
-//   --background-colour: $background;
-//   --primary-color: $primary;
-//   --light-primary-color: $terciary;
-//   --secondary-color: $secondary;
-// }
-
-// body {
-//   margin: 0;
-//   font-family: 'Space Mono', monospace;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   background-color: $background;
-// }
-
-:root {
-  --background-colour: #616161;
-  --primary-color: #8a2be2;
-  --light-primary-color: #7b11dfb1;
-  --secondary-color: #ffbf00;
+.app-main.light {
+  --primary: var(--primary-light);
+  --secondary: var(--secondary-light);
+  --terciary: var(--terciary-light);
+  --success: var(--success-light);
+  --info: var(--info-light);
+  --warning: var(--warning-light);
+  --danger: var(--danger-light);
+  --light: var(--light-light);
+  --dark: var(--dark-light);
+  --background: var(--background-light);
+  --accent: var(--accent-light);
+  background-color: var(--background);
+  color: var(--dark);
 }
 
-body {
-  margin: 0;
-  font-family: 'Space Mono', monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-colour);
+.app-main.dark {
+  --primary: var(--primary-dark);
+  --secondary: var(--secondary-dark);
+  --terciary: var(--terciary-dark);
+  --success: var(--success-dark);
+  --info: var(--info-dark);
+  --warning: var(--warning-dark);
+  --danger: var(--danger-dark);
+  --light: var(--light-dark);
+  --dark: var(--dark-dark);
+  --background: var(--background-dark);
+  --accent: var(--accent-dark);
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.btn {
+  &.light {
+    background-color: var(--primary-light);
+    color: var(--light-light);
+  }
+
+  &.dark {
+    background-color: var(--primary-dark);
+    color: var(--light-dark);
+  }
+}
+
+.navbar {
+  &.light {
+    background-color: var(--primary-light);
+    color: var(--light-light);
+
+    .navbar-brand,
+    .nav-link {
+      color: var(--light-light);
+    }
+  }
+
+  &.dark {
+    background-color: var(--primary-dark);
+    color: var(--light-dark);
+
+    .navbar-brand,
+    .nav-link {
+      color: var(--light-dark);
+    }
+  }
+}
+
+
+.main-body {
+  background-color: var(--background);
+  color: var(--light);
 }
