@@ -37,12 +37,24 @@
 .btn {
   &.light {
     background-color: var(--primary-light);
+    border-color: var(--secondary-light);
     color: var(--accent-light);
+
+    &:hover {
+      background-color: var(--success-light);
+      border-color: var(--success-light);
+    }
   }
 
   &.dark {
     background-color: var(--primary-dark);
+    border-color: var(--secondary-dark);
     color: var(--accent-dark);
+
+    &:hover {
+      background-color: var(--success-dark);
+      border-color: var(--success-dark);
+    }
   }
 }
 
