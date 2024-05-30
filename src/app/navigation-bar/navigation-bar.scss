@@ -25,4 +25,9 @@
     width: 30px;
     background-color: var(--light);
   }
+
+  .nav-theme-container {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

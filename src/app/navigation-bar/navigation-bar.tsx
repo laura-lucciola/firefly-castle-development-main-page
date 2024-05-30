@@ -5,13 +5,15 @@ import logo from '../../assets/company-logo.svg';
 import { useTheme } from '../color-theme/theme-context';
 import { Button } from 'react-bootstrap';
 import './navigation-bar.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 function NavigationBar() {
     const { theme, toggleTheme } = useTheme();
 
     return (
         <Navbar className={`${theme}`}>
-            <Container>
+            <Container id="nav-items-container" className="nav-items-container">
                 <Navbar.Brand href="/">
                     <img src={logo} className="company-logo-image" alt="Company logo" />
                 </Navbar.Brand>
@@ -20,9 +22,9 @@ function NavigationBar() {
                     <Nav.Link href="/contact">Contact</Nav.Link>
                 </Nav>
             </Container>
-            <Container>
+            <Container id="nav-theme-container" className="nav-theme-container">
                 <Button className={`${theme}`} onClick={toggleTheme}>
-                    Toggle theme
+                    {theme === 'light' ? <FontAwesomeIcon icon={faMoon} /> : <FontAwesomeIcon icon={faSun} />}
                 </Button>
             </Container>
         </Navbar>
