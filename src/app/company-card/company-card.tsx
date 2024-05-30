@@ -2,15 +2,23 @@ import logo from '../../assets/company-logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGitlab, faLinkedin, faDev } from '@fortawesome/free-brands-svg-icons';
 import Card from 'react-bootstrap/Card';
-
+import { useTheme } from '../color-theme/theme-context';
+import './company-card.scss';
 export function CompanyCard() {
+    const { theme } = useTheme();
+
     return (
-        <Card id="company-card" className="company-card">
+        <Card id="company-card" className={`${theme} company-card`}>
             <Card.Header>Welcome to Firefly Castle Development</Card.Header>
 
             <Card.Subtitle>Delivering quality since 2024</Card.Subtitle>
 
-            <Card.Img variant="top" src={logo} alt="Firefly Castle Development company logo" height="300px" />
+            <Card.Img
+                className="company-logo-image"
+                variant="top"
+                src={logo}
+                alt="Firefly Castle Development company logo"
+            />
 
             <Card.Body>
                 <Card.Text>
@@ -59,9 +67,7 @@ export function CompanyCard() {
             </Card.Body>
 
             <Card.Footer>
-                <small className="text-muted">
-                    This website and image were generated with the AI assistance of Microsoft CoPilot
-                </small>
+                <small>This website and image were generated with the AI assistance of Microsoft CoPilot</small>
             </Card.Footer>
         </Card>
     );

@@ -1,0 +1,33 @@
+.navbar {
+  &.light {
+    background-color: var(--primary-light);
+    color: var(--light-light);
+
+    .navbar-brand,
+    .nav-link {
+      color: var(--accent-light);
+    }
+  }
+
+  &.dark {
+    background-color: var(--primary-dark);
+    color: var(--light-dark);
+
+    .navbar-brand,
+    .nav-link {
+      color: var(--accent-dark);
+    }
+  }
+
+  .company-logo-image {
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+    background-color: var(--light);
+  }
+
+  .nav-theme-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

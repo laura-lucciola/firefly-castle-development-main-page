@@ -1,8 +1,12 @@
 import Card from 'react-bootstrap/Card';
+import { useTheme } from '../color-theme/theme-context';
+import './personal-card.scss';
 
 export function PersonalCard() {
+    const { theme } = useTheme();
+
     return (
-        <Card id="who-am-i-card" className="who-am-i-card">
+        <Card id="who-am-i-card" className={`${theme} who-am-i-card`}>
             <Card.Header id="who-am-i-header">Who am I?</Card.Header>
             <Card.Subtitle id="who-am-i-subtitle">Laura Lucciola</Card.Subtitle>
             <Card.Body>
