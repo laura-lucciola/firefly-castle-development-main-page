@@ -3,7 +3,7 @@ import { PersonalCard } from '../personal-card/personal-card';
 
 function HomePage() {
     return (
-        <div id="home-page">
+        <div id="home-page" className="home-page">
             <CompanyCard></CompanyCard>
             <PersonalCard></PersonalCard>
         </div>
