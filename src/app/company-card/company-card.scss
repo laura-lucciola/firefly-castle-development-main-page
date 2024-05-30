@@ -12,8 +12,16 @@
   max-width: 100vh;
   max-height: 100vh;
 
-  .card-img-top {
+  .card-subtitle {
+    padding-top: 1rem;
+  }
+
+  .company-logo-image {
+    margin-top: 1rem;
     border-radius: 10px;
+    height: 300px;
+    width: 300px;
+    background-color: var(--light);
   }
 
   .social-links {

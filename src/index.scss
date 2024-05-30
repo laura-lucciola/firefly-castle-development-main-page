@@ -37,34 +37,12 @@
 .btn {
   &.light {
     background-color: var(--primary-light);
-    color: var(--light-light);
+    color: var(--accent-light);
   }
 
   &.dark {
     background-color: var(--primary-dark);
-    color: var(--light-dark);
-  }
-}
-
-.navbar {
-  &.light {
-    background-color: var(--primary-light);
-    color: var(--light-light);
-
-    .navbar-brand,
-    .nav-link {
-      color: var(--light-light);
-    }
-  }
-
-  &.dark {
-    background-color: var(--primary-dark);
-    color: var(--light-dark);
-
-    .navbar-brand,
-    .nav-link {
-      color: var(--light-dark);
-    }
+    color: var(--accent-dark);
   }
 }
 
@@ -74,19 +52,19 @@
     color: var(--light-light);
 
     .card-header {
-      color: var(--secondary-light);
+      color: var(--accent-light);
     }
 
     .card-subtitle {
-      color: var(--secondary-light);
+      color: var(--accent-light);
     }
 
     .card-text {
-      color: var(--secondary-light);
+      color: var(--accent-light);
     }
 
     .card-footer {
-      color: var(--secondary-light);
+      color: var(--accent-light);
     }
 
     .social-link {
@@ -103,19 +81,19 @@
     color: var(--light-dark);
 
     .card-header {
-      color: var(--secondary-dark);
+      color: var(--accent-dark);
     }
 
     .card-subtitle {
-      color: var(--secondary-dark);
+      color: var(--accent-dark);
     }
 
     .card-text {
-      color: var(--secondary-dark);
+      color: var(--accent-dark);
     }
 
     .card-footer {
-      color: var(--secondary-dark);
+      color: var(--accent-dark);
     }
 
     .social-link {

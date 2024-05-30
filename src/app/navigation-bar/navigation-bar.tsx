@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import logo from '../../assets/company-logo.svg';
 import { useTheme } from '../color-theme/theme-context';
 import { Button } from 'react-bootstrap';
+import './navigation-bar.scss';
 
 function NavigationBar() {
     const { theme, toggleTheme } = useTheme();
@@ -12,7 +13,7 @@ function NavigationBar() {
         <Navbar className={`${theme}`}>
             <Container>
                 <Navbar.Brand href="/">
-                    <img src={logo} width="40" height="40" className="d-inline-block align-top" alt="Company logo" />
+                    <img src={logo} className="company-logo-image" alt="Company logo" />
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>

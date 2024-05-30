@@ -13,7 +13,12 @@ export function CompanyCard() {
 
             <Card.Subtitle>Delivering quality since 2024</Card.Subtitle>
 
-            <Card.Img variant="top" src={logo} alt="Firefly Castle Development company logo" height="300px" />
+            <Card.Img
+                className="company-logo-image"
+                variant="top"
+                src={logo}
+                alt="Firefly Castle Development company logo"
+            />
 
             <Card.Body>
                 <Card.Text>
