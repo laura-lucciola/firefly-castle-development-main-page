@@ -1,22 +1,10 @@
 .navbar {
-  &.light {
-    background-color: var(--primary-light);
-    color: var(--light-light);
+  background-color: var(--primary);
+  color: var(--light);
 
-    .navbar-brand,
-    .nav-link {
-      color: var(--accent-light);
-    }
-  }
-
-  &.dark {
-    background-color: var(--primary-dark);
-    color: var(--light-dark);
-
-    .navbar-brand,
-    .nav-link {
-      color: var(--accent-dark);
-    }
+  .navbar-brand,
+  .nav-link {
+    color: var(--accent);
   }
 
   .company-logo-image {

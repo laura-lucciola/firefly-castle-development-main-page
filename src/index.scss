@@ -1,8 +1,7 @@
-/* custom.scss */
 @import './style/variables.scss';
 @import '~bootstrap/scss/bootstrap';
 
-.app-main.light {
+.light {
   --primary: var(--primary-light);
   --secondary: var(--secondary-light);
   --terciary: var(--terciary-light);
@@ -16,7 +15,7 @@
   --accent: var(--accent-light);
 }
 
-.app-main.dark {
+.dark {
   --primary: var(--primary-dark);
   --secondary: var(--secondary-dark);
   --terciary: var(--terciary-dark);
@@ -28,88 +27,4 @@
   --dark: var(--dark-dark);
   --background: var(--background-dark);
   --accent: var(--accent-dark);
-}
-
-.btn {
-  &.light {
-    background-color: var(--primary-light);
-    border-color: var(--secondary-light);
-    color: var(--accent-light);
-
-    &:hover {
-      background-color: var(--success-light);
-      border-color: var(--success-light);
-    }
-  }
-
-  &.dark {
-    background-color: var(--primary-dark);
-    border-color: var(--secondary-dark);
-    color: var(--accent-dark);
-
-    &:hover {
-      background-color: var(--success-dark);
-      border-color: var(--success-dark);
-    }
-  }
-}
-
-.card {
-  &.light {
-    background-color: var(--primary-light);
-    color: var(--light-light);
-
-    .card-header {
-      color: var(--accent-light);
-    }
-
-    .card-subtitle {
-      color: var(--accent-light);
-    }
-
-    .card-text {
-      color: var(--accent-light);
-    }
-
-    .card-footer {
-      color: var(--accent-light);
-    }
-
-    .social-link {
-      color: var(--terciary-light);
-
-      &:hover {
-        color: var(--success-light);
-      }
-    }
-  }
-
-  &.dark {
-    background-color: var(--primary-dark);
-    color: var(--light-dark);
-
-    .card-header {
-      color: var(--accent-dark);
-    }
-
-    .card-subtitle {
-      color: var(--accent-dark);
-    }
-
-    .card-text {
-      color: var(--accent-dark);
-    }
-
-    .card-footer {
-      color: var(--accent-dark);
-    }
-
-    .social-link {
-      color: var(--terciary-dark);
-
-      &:hover {
-        color: var(--success-light);
-      }
-    }
-  }
 }
