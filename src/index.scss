@@ -68,6 +68,66 @@
   }
 }
 
+.card {
+  &.light {
+    background-color: var(--primary-light);
+    color: var(--light-light);
+
+    .card-header {
+      color: var(--secondary-light);
+    }
+
+    .card-subtitle {
+      color: var(--secondary-light);
+    }
+
+    .card-text {
+      color: var(--secondary-light);
+    }
+
+    .card-footer {
+      color: var(--secondary-light);
+    }
+
+    .social-link {
+      color: var(--terciary-light);
+
+      &:hover {
+        color: var(--success-light);
+      }
+    }
+  }
+
+  &.dark {
+    background-color: var(--primary-dark);
+    color: var(--light-dark);
+
+    .card-header {
+      color: var(--secondary-dark);
+    }
+
+    .card-subtitle {
+      color: var(--secondary-dark);
+    }
+
+    .card-text {
+      color: var(--secondary-dark);
+    }
+
+    .card-footer {
+      color: var(--secondary-dark);
+    }
+
+    .social-link {
+      color: var(--terciary-dark);
+
+      &:hover {
+        color: var(--success-light);
+      }
+    }
+  }
+}
+
 
 .main-body {
   background-color: var(--background);
