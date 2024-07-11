@@ -28,7 +28,7 @@ export function CompanyCard() {
 
                 <div id="social-links" className="social-links">
                     <a
-                        href="https://github.com/laura-lucciola"
+                        href={process.env.REACT_APP_GITHUB_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         id="github-link"
@@ -37,7 +37,7 @@ export function CompanyCard() {
                         <FontAwesomeIcon icon={faGithub} /> GitHub
                     </a>
                     <a
-                        href="https://gitlab.com/laura-lucciola"
+                        href={process.env.REACT_APP_GITLAB_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         id="gitlab-link"
@@ -46,7 +46,7 @@ export function CompanyCard() {
                         <FontAwesomeIcon icon={faGitlab} /> GitLab
                     </a>
                     <a
-                        href="https://www.linkedin.com/in/laura-lucciola/"
+                        href={process.env.REACT_APP_LINKEDIN_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         id="linkedin-link"
@@ -55,7 +55,7 @@ export function CompanyCard() {
                         <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
                     </a>
                     <a
-                        href="https://dev.to/laura-lucciola"
+                        href={process.env.REACT_APP_DEVTO_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         id="dev-link"
