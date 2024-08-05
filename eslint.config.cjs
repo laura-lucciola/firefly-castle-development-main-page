@@ -17,11 +17,12 @@ module.exports = [
         'eslint:recommended',
         'plugin:react/recommended',
         'plugin:prettier/recommended',
-        'plugin:@typescript-eslint/recommended'
+        'plugin:@typescript-eslint/recommended',
+        'plugin:react/jsx-runtime'
     ),
     {
         files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
-        ignores: ['node_modules', 'build', '!**/eslint.config.js', '**/*.config.cjs'],
+        ignores: ['node_modules/**', 'build/**', 'eslint.config.cjs', '**/*.config.cjs'],
         plugins: {
             prettier,
             react,
