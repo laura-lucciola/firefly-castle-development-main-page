@@ -9,15 +9,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import {  useTranslation } from 'react-i18next';
-
-const lngs :any = {
-  en: { nativeName: 'English' },
-  pt: { nativeName: 'Português' }
-};
+import LocaleFlags from '../../locales/locale-flag';
 
 function NavigationBar() {
     const { theme, toggleTheme } = useTheme();
-      const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
 
     return (
         <Navbar className={`${theme}`}>
@@ -37,22 +33,26 @@ function NavigationBar() {
                     </Nav.Link>
                 </Nav>
             </Container>
+            <Container id="nav-translation-container" className="nav-translation-container">
+                {i18n.resolvedLanguage &&
+                <NavDropdown title={
+                <>{LocaleFlags[i18n.resolvedLanguage].flag} {LocaleFlags[i18n.resolvedLanguage].nativeName}</>} id="nav-translation-dropdown" className="nav-translation-dropdown">
+                    {Object.keys(LocaleFlags).map((lng) => (
+                        <NavDropdown.Item key={lng} id="nav-translation-dropdown-item" className="nav-translation-dropdown-item" >
+                            <Button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+                                {LocaleFlags[lng].flag} {LocaleFlags[lng].nativeName}
+                                </Button>
+                        </NavDropdown.Item>
+                    ))}
+                </NavDropdown>
+                }
+            </Container>
             <Container id="nav-theme-container" className="nav-theme-container">
                 <Button className={`${theme}`} onClick={toggleTheme}>
                     {theme === 'light' ? <FontAwesomeIcon icon={faMoon} /> : <FontAwesomeIcon icon={faSun} />}
                 </Button>
             </Container>
-            <Container id="nav-translation-container" className="nav-translation-container">
-                <NavDropdown title={i18n.resolvedLanguage} id="nav-translation-dropdown" className="nav-translation-dropdown">
-                    {Object.keys(lngs).map((lng) => (
-                        <NavDropdown.Item key={lng} id="nav-translation-dropdown-item" className="nav-translation-dropdown-item" >
-                            <Button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
-                                {lngs[lng].nativeName}
-                                </Button>
-                        </NavDropdown.Item>
-                    ))}
-                </NavDropdown>
-            </Container>
+
         </Navbar>
     );
 }

@@ -5,10 +5,10 @@ import English from "./english.json";
 import Portuguese from "./portuguese.json";
 
 const resources = {
-    en: {
+    'en-GB': {
         translation: English,
     },
-    pt: {
+    'pt-BR': {
         translation: Portuguese,
     },
 }
@@ -18,7 +18,7 @@ i18n.use(LanguageDetector)
     .init({
         resources,
         debug: true,
-        fallbackLng: 'en',
+        fallbackLng: 'en-GB',
         interpolation: {
             escapeValue: false,
         }
