@@ -19,6 +19,7 @@ function NavigationBar() {
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/feedback">Feedback</Nav.Link>
                     <Nav.Link href="/contact">Contact</Nav.Link>
                 </Nav>
             </Container>

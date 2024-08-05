@@ -7,32 +7,29 @@ import ContactPage from './contact-page/contact-page';
 import { useTheme } from './color-theme/theme-context';
 import FeedbackPage from './feedback-page/feedback-page';
 
+interface TitleMapping {
+    [key: string]: string;
+}
+
 const usePageTitle = () => {
     const location = useLocation();
-
-    const appName = process.env.REACT_APP_COMPANY_NAME;
+    const appName = process.env.REACT_APP_COMPANY_NAME ?? 'Company Name';
 
     useEffect(() => {
-        switch (location.pathname) {
-            case '/':
-                document.title = `Home | ${appName}`;
-                break;
-            case '/feedback':
-                document.title = `Feedback | ${appName}`;
-                break;
-            case '/contact':
-                document.title = `Contact | ${appName}`;
-                break;
-            default:
-                document.title = `${appName}`;
-        }
-    }, [location]);
+        const titles: TitleMapping = {
+            '/': `Home | ${appName}`,
+            '/feedback': `Feedback | ${appName}`,
+            '/contact': `Contact | ${appName}`,
+        };
+
+        document.title = titles[location.pathname] || appName;
+    }, [appName, location]);
 };
 
-const MainContent: React.FC = () => {
+const Navigator: React.FC = () => {
     const { theme } = useTheme();
 
-    usePageTitle(); // Custom hook to set page title
+    usePageTitle();
 
     return (
         <div id="app-main" className={`app-main ${theme}`}>
@@ -48,4 +45,4 @@ const MainContent: React.FC = () => {
     );
 };
 
-export default MainContent;
+export default Navigator;

@@ -1,13 +1,13 @@
 import './app.scss';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from './color-theme/theme-context';
-import MainContent from './main-content';
+import Navigator from './navigator';
 
 function App() {
     return (
         <ThemeProvider>
             <BrowserRouter>
-                <MainContent />
+                <Navigator />
             </BrowserRouter>
         </ThemeProvider>
     );
