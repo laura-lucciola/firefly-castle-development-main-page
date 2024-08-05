@@ -67,7 +67,12 @@ export function CompanyCard() {
             </Card.Body>
 
             <Card.Footer>
-                <small>This website and image were generated with the AI assistance of Microsoft CoPilot</small>
+                <p>
+                    <small>This website and image were generated with the AI assistance of Microsoft CoPilot</small>
+                </p>
+                <p>
+                    <small>We don't use cookies</small>
+                </p>
             </Card.Footer>
         </Card>
     );

@@ -7,6 +7,7 @@ import { Button } from 'react-bootstrap';
 import './navigation-bar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function NavigationBar() {
     const { theme, toggleTheme } = useTheme();
@@ -18,8 +19,15 @@ function NavigationBar() {
                     <img src={logo} className="company-logo-image" alt="Company logo" />
                 </Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/contact">Contact</Nav.Link>
+                    <Nav.Link as={Link} to="/">
+                        Home
+                    </Nav.Link>
+                    <Nav.Link as={Link} to="/feedback">
+                        Feedback
+                    </Nav.Link>
+                    <Nav.Link as={Link} to="/contact">
+                        Contact
+                    </Nav.Link>
                 </Nav>
             </Container>
             <Container id="nav-theme-container" className="nav-theme-container">

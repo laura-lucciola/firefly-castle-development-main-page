@@ -5,13 +5,7 @@ module.exports = {
         es6: true,
     },
     root: true,
-    extends: [
-        'prettier',
-        'eslint:recommended',
-        'react-app',
-        'plugin:prettier/recommended',
-        'plugin:@typescript-eslint/recommended',
-    ],
+    extends: ['prettier', 'eslint:recommended', 'plugin:prettier/recommended', 'plugin:@typescript-eslint/recommended'],
     overrides: [],
     parser: '@typescript-eslint/parser',
     parserOptions: {
