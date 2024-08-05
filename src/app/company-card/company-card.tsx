@@ -68,6 +68,7 @@ export function CompanyCard() {
 
             <Card.Footer>
                 <small>This website and image were generated with the AI assistance of Microsoft CoPilot</small>
+                <small>We don't use cookies</small>
             </Card.Footer>
         </Card>
     );
