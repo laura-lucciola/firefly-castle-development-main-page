@@ -4,14 +4,17 @@ import { faGithub, faGitlab, faLinkedin, faDev } from '@fortawesome/free-brands-
 import Card from 'react-bootstrap/Card';
 import { useTheme } from '../color-theme/theme-context';
 import './company-card.scss';
+import { useTranslation } from 'react-i18next';
+
 export function CompanyCard() {
     const { theme } = useTheme();
+    const { t } = useTranslation();
 
     return (
         <Card id="company-card" className={`${theme} company-card`}>
-            <Card.Header>Welcome to Firefly Castle Development</Card.Header>
+            <Card.Header>{t('companyCard.header')}</Card.Header>
 
-            <Card.Subtitle>Delivering quality since 2024</Card.Subtitle>
+            <Card.Subtitle>{t('companyCard.subtitle')}</Card.Subtitle>
 
             <Card.Img
                 className="company-logo-image"
