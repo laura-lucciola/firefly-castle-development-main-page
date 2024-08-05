@@ -1,6 +1,23 @@
 {
+    "common": {
+        "comingSoon": "Em Breve!",
+        "logoAlt": "Logotipo da empresa Firefly Castle Development"
+    },
+    "navigationBar": {
+        "home": "Início",
+        "feedback": "Feedback",
+        "contact": "Contato"
+    },
     "companyCard": {
-        "header": "Bem-vindos ao Firefly Castle Development",
-        "subtitle": "Entregando qualidade desde 2024"
+        "header": "Bem-vindo à Firefly Castle Development",
+        "subtitle": "Entregando qualidade desde 2024",
+        "description": "Somos uma empresa de consultoria em software especializada em soluções inovadoras para empresas no Reino Unido.",
+        "aiWarning": "Este site e a imagem foram gerados com a assistência de IA do Microsoft CoPilot",
+        "cookiesWarning": "Não usamos cookies"
+    },
+    "personalCard": {
+        "header": "Quem sou eu?",
+        "subtitle": "Laura Lucciola",
+        "description": "Engenheira de Software Sênior dedicada em uma jornada contínua de crescimento. Uma engenheira de software adaptável, trabalhadora, organizada e confiável, ansiosa para aprender com outras culturas e pessoas de diferentes origens. Sou apaixonada por usar a tecnologia para melhorar a vida das pessoas e aprimorar minhas habilidades no processo."
     }
 }
