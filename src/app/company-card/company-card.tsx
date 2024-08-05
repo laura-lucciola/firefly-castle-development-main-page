@@ -20,13 +20,12 @@ export function CompanyCard() {
                 className="company-logo-image"
                 variant="top"
                 src={logo}
-                alt="Firefly Castle Development company logo"
+                alt={t('common.logoAlt')}
             />
 
             <Card.Body>
-                <Card.Text>
-                    We are a software consulting company specializing in cutting-edge solutions for businesses in the
-                    United Kingdom.
+                <Card.Text>{t('companyCard.description')}
+                    
                 </Card.Text>
 
                 <div id="social-links" className="social-links">
@@ -71,10 +70,10 @@ export function CompanyCard() {
 
             <Card.Footer>
                 <p>
-                    <small>This website and image were generated with the AI assistance of Microsoft CoPilot</small>
+                    <small>{t('companyCard.aiWarning')}</small>
                 </p>
                 <p>
-                    <small>We don't use cookies</small>
+                    <small>{t('companyCard.cookiesWarning')}</small>
                 </p>
             </Card.Footer>
         </Card>

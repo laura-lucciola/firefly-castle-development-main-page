@@ -13,23 +13,22 @@ import LocaleFlags from '../../locales/locale-flag';
 
 function NavigationBar() {
     const { theme, toggleTheme } = useTheme();
-    const { i18n } = useTranslation();
-
+    const { i18n, t } = useTranslation();
     return (
         <Navbar className={`${theme}`}>
             <Container id="nav-items-container" className="nav-items-container">
                 <Navbar.Brand href="/">
-                    <img src={logo} className="company-logo-image" alt="Company logo" />
+                    <img src={logo} className="company-logo-image" alt={t('common.logoAlt')} />
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link as={Link} to="/">
-                        Home
+                        {t('navigationBar.home')}
                     </Nav.Link>
                     <Nav.Link as={Link} to="/feedback">
-                        Feedback
+                        {t('navigationBar.feedback')}
                     </Nav.Link>
                     <Nav.Link as={Link} to="/contact">
-                        Contact
+                        {t('navigationBar.contact')}
                     </Nav.Link>
                 </Nav>
             </Container>
