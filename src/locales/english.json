@@ -1,19 +1,19 @@
 {
-    "common":{
-        "comingSoon":"Coming Soon!",
+    "common": {
+        "comingSoon": "Coming Soon!",
         "logoAlt": "Firefly Castle Development company logo"
     },
-    "navigationBar":{
-        "home":"Home",
-        "feedback":"Feedback",
-        "contact":"Contact"
+    "navigationBar": {
+        "home": "Home",
+        "feedback": "Feedback",
+        "contact": "Contact"
     },
     "companyCard": {
         "header": "Welcome to Firefly Castle Development",
         "subtitle": "Delivering quality since 2024",
         "description": "We are a software consulting company specializing in cutting-edge solutions for businesses in the United Kingdom.",
-        "aiWarning":"This website and image were generated with the AI assistance of Microsoft CoPilot",
-        "cookiesWarning":"We don't use cookies"
+        "aiWarning": "This website and image were generated with the AI assistance of Microsoft CoPilot",
+        "cookiesWarning": "We don't use cookies"
     },
     "personalCard": {
         "header": "Who am I?",

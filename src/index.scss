@@ -2,29 +2,29 @@
 @import '~bootstrap/scss/bootstrap';
 
 .light {
-  --primary: var(--primary-light);
-  --secondary: var(--secondary-light);
-  --terciary: var(--terciary-light);
-  --success: var(--success-light);
-  --info: var(--info-light);
-  --warning: var(--warning-light);
-  --danger: var(--danger-light);
-  --light: var(--light-light);
-  --dark: var(--dark-light);
-  --background: var(--background-light);
-  --accent: var(--accent-light);
+    --primary: var(--primary-light);
+    --secondary: var(--secondary-light);
+    --terciary: var(--terciary-light);
+    --success: var(--success-light);
+    --info: var(--info-light);
+    --warning: var(--warning-light);
+    --danger: var(--danger-light);
+    --light: var(--light-light);
+    --dark: var(--dark-light);
+    --background: var(--background-light);
+    --accent: var(--accent-light);
 }
 
 .dark {
-  --primary: var(--primary-dark);
-  --secondary: var(--secondary-dark);
-  --terciary: var(--terciary-dark);
-  --success: var(--success-dark);
-  --info: var(--info-dark);
-  --warning: var(--warning-dark);
-  --danger: var(--danger-dark);
-  --light: var(--light-dark);
-  --dark: var(--dark-dark);
-  --background: var(--background-dark);
-  --accent: var(--accent-dark);
+    --primary: var(--primary-dark);
+    --secondary: var(--secondary-dark);
+    --terciary: var(--terciary-dark);
+    --success: var(--success-dark);
+    --info: var(--info-dark);
+    --warning: var(--warning-dark);
+    --danger: var(--danger-dark);
+    --light: var(--light-dark);
+    --dark: var(--dark-dark);
+    --background: var(--background-dark);
+    --accent: var(--accent-dark);
 }

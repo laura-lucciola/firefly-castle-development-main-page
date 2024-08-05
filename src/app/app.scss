@@ -1,52 +1,52 @@
 .app-main {
-  min-height: 100vh;
-  background-color: var(--background);
-  color: var(--light);
-
-  .main-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .btn {
-    background-color: var(--primary);
-    border-color: var(--secondary);
-    color: var(--accent);
-
-    &:hover {
-      background-color: var(--success);
-      border-color: var(--success);
-    }
-  }
-
-  .card {
-    background-color: var(--primary);
+    min-height: 100vh;
+    background-color: var(--background);
     color: var(--light);
 
-    .card-header {
-      color: var(--accent);
+    .main-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
-    .card-subtitle {
-      color: var(--accent);
+    .btn {
+        background-color: var(--primary);
+        border-color: var(--secondary);
+        color: var(--accent);
+
+        &:hover {
+            background-color: var(--success);
+            border-color: var(--success);
+        }
     }
 
-    .card-text {
-      color: var(--accent);
-    }
+    .card {
+        background-color: var(--primary);
+        color: var(--light);
 
-    .card-footer {
-      color: var(--accent);
-    }
+        .card-header {
+            color: var(--accent);
+        }
 
-    .social-link {
-      color: var(--terciary);
+        .card-subtitle {
+            color: var(--accent);
+        }
 
-      &:hover {
-        color: var(--success);
-      }
+        .card-text {
+            color: var(--accent);
+        }
+
+        .card-footer {
+            color: var(--accent);
+        }
+
+        .social-link {
+            color: var(--terciary);
+
+            &:hover {
+                color: var(--success);
+            }
+        }
     }
-  }
 }

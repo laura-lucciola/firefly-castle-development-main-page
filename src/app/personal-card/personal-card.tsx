@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 export function PersonalCard() {
     const { theme } = useTheme();
-    
+
     const { t } = useTranslation();
 
     return (

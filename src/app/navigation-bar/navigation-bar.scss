@@ -1,26 +1,26 @@
 .navbar {
-  background-color: var(--primary);
-  color: var(--light);
+    background-color: var(--primary);
+    color: var(--light);
 
-  .navbar-brand,
-  .nav-link {
-    color: var(--accent);
-  }
+    .navbar-brand,
+    .nav-link {
+        color: var(--accent);
+    }
 
-  .company-logo-image {
-    border-radius: 10px;
-    height: 30px;
-    width: 30px;
-    background-color: var(--light);
-  }
+    .company-logo-image {
+        border-radius: 10px;
+        height: 30px;
+        width: 30px;
+        background-color: var(--light);
+    }
 
-  .nav-theme-container {
-    display: flex;
-    justify-content: flex-end;
-  }
+    .nav-theme-container {
+        display: flex;
+        justify-content: flex-end;
+    }
 
-  .nav-translation-container {
-    display: flex;
-    justify-content: flex-end;
-  }
+    .nav-translation-container {
+        display: flex;
+        justify-content: flex-end;
+    }
 }

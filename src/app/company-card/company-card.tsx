@@ -16,17 +16,10 @@ export function CompanyCard() {
 
             <Card.Subtitle>{t('companyCard.subtitle')}</Card.Subtitle>
 
-            <Card.Img
-                className="company-logo-image"
-                variant="top"
-                src={logo}
-                alt={t('common.logoAlt')}
-            />
+            <Card.Img className="company-logo-image" variant="top" src={logo} alt={t('common.logoAlt')} />
 
             <Card.Body>
-                <Card.Text>{t('companyCard.description')}
-                    
-                </Card.Text>
+                <Card.Text>{t('companyCard.description')}</Card.Text>
 
                 <div id="social-links" className="social-links">
                     <a
