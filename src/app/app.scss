@@ -24,9 +24,20 @@
     .card {
         background-color: var(--primary);
         color: var(--light);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 1rem;
+        padding: 1rem;
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
         .card-header {
             color: var(--accent);
+            background-color: transparent;
         }
 
         .card-subtitle {
@@ -39,6 +50,7 @@
 
         .card-footer {
             color: var(--accent);
+            background-color: transparent;
         }
 
         .social-link {
@@ -48,5 +60,9 @@
                 color: var(--success);
             }
         }
+    }
+
+    .form-label {
+        color: var(--accent);
     }
 }
