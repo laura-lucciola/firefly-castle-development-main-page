@@ -14,11 +14,17 @@ import LocaleFlags from '../../locales/locale-flag';
 function NavigationBar() {
     const { theme, toggleTheme } = useTheme();
     const { i18n, t } = useTranslation();
+    const companyName = process.env.REACT_APP_COMPANY_NAME;
+
     return (
         <Navbar className={`${theme}`}>
             <Container id="nav-items-container" className="nav-items-container">
                 <Navbar.Brand href="/">
-                    <img src={logo} className="company-logo-image" alt={t('common.logoAlt')} />
+                    <img
+                        src={logo}
+                        className="company-logo-image"
+                        alt={t('common.logoAlt', { companyName: companyName })}
+                    />
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link as={Link} to="/">

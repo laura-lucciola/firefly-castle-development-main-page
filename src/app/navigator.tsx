@@ -15,17 +15,17 @@ interface TitleMapping {
 const usePageTitle = () => {
     const location = useLocation();
     const { t } = useTranslation();
-    const appName = process.env.REACT_APP_COMPANY_NAME ?? 'Company Name';
+    const companyName = process.env.REACT_APP_COMPANY_NAME ?? '';
 
     useEffect(() => {
         const titles: TitleMapping = {
-            '/': `${t('navigationBar.home')} | ${appName}`,
-            '/feedback': `${t('navigationBar.feedback')} | ${appName}`,
-            '/contact': `${t('navigationBar.contact')} | ${appName}`,
+            '/': `${t('navigationBar.home')} | ${companyName}`,
+            '/feedback': `${t('navigationBar.feedback')} | ${companyName}`,
+            '/contact': `${t('navigationBar.contact')} | ${companyName}`,
         };
 
-        document.title = titles[location.pathname] || appName;
-    }, [appName, location]);
+        document.title = titles[location.pathname] || companyName;
+    }, [companyName, location]);
 };
 
 const Navigator: React.FC = () => {

@@ -1,7 +1,7 @@
 {
     "common": {
         "comingSoon": "Em Breve!",
-        "logoAlt": "Logotipo da empresa Firefly Castle Development"
+        "logoAlt": "Logotipo da empresa {{companyName}}"
     },
     "navigationBar": {
         "home": "Início",
@@ -9,7 +9,7 @@
         "contact": "Contato"
     },
     "companyCard": {
-        "header": "Bem-vindo à Firefly Castle Development",
+        "header": "Bem-vindo à {{companyName}}",
         "subtitle": "Entregando qualidade desde 2024",
         "description": "Somos uma empresa de consultoria em software especializada em soluções inovadoras para empresas no Reino Unido.",
         "aiWarning": "Este site e a imagem foram gerados com a assistência de IA do Microsoft CoPilot",

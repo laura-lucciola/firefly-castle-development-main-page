@@ -9,14 +9,20 @@ import { useTranslation } from 'react-i18next';
 export function CompanyCard() {
     const { theme } = useTheme();
     const { t } = useTranslation();
+    const companyName = process.env.REACT_APP_COMPANY_NAME;
 
     return (
         <Card id="company-card" className={`${theme} company-card`}>
-            <Card.Header>{t('companyCard.header')}</Card.Header>
+            <Card.Header>{t('companyCard.header', { companyName: companyName })}</Card.Header>
 
             <Card.Subtitle>{t('companyCard.subtitle')}</Card.Subtitle>
 
-            <Card.Img className="company-logo-image" variant="top" src={logo} alt={t('common.logoAlt')} />
+            <Card.Img
+                className="company-logo-image"
+                variant="top"
+                src={logo}
+                alt={t('common.logoAlt', { companyName: companyName })}
+            />
 
             <Card.Body>
                 <Card.Text>{t('companyCard.description')}</Card.Text>
