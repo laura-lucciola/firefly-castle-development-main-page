@@ -37,6 +37,7 @@
 
         .card-header {
             color: var(--accent);
+            background-color: transparent;
         }
 
         .card-subtitle {
@@ -49,6 +50,7 @@
 
         .card-footer {
             color: var(--accent);
+            background-color: transparent;
         }
 
         .social-link {
@@ -58,5 +60,9 @@
                 color: var(--success);
             }
         }
+    }
+
+    .form-label {
+        color: var(--accent);
     }
 }

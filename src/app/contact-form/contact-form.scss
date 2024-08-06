@@ -1,0 +1,15 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .contact-form-item {
+        margin-top: 1rem;
+        min-height: 10vh;
+    }
+
+    .contact-form-submit {
+        margin-top: 2rem;
+    }
+}
