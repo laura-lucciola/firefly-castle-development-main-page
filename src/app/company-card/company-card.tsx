@@ -4,27 +4,28 @@ import { faGithub, faGitlab, faLinkedin, faDev } from '@fortawesome/free-brands-
 import Card from 'react-bootstrap/Card';
 import { useTheme } from '../color-theme/theme-context';
 import './company-card.scss';
+import { useTranslation } from 'react-i18next';
+
 export function CompanyCard() {
     const { theme } = useTheme();
+    const { t } = useTranslation();
+    const companyName = process.env.REACT_APP_COMPANY_NAME;
 
     return (
         <Card id="company-card" className={`${theme} company-card`}>
-            <Card.Header>Welcome to Firefly Castle Development</Card.Header>
+            <Card.Header>{t('companyCard.header', { companyName: companyName })}</Card.Header>
 
-            <Card.Subtitle>Delivering quality since 2024</Card.Subtitle>
+            <Card.Subtitle>{t('companyCard.subtitle')}</Card.Subtitle>
 
             <Card.Img
                 className="company-logo-image"
                 variant="top"
                 src={logo}
-                alt="Firefly Castle Development company logo"
+                alt={t('common.logoAlt', { companyName: companyName })}
             />
 
             <Card.Body>
-                <Card.Text>
-                    We are a software consulting company specializing in cutting-edge solutions for businesses in the
-                    United Kingdom.
-                </Card.Text>
+                <Card.Text>{t('companyCard.description')}</Card.Text>
 
                 <div id="social-links" className="social-links">
                     <a
@@ -68,10 +69,10 @@ export function CompanyCard() {
 
             <Card.Footer>
                 <p>
-                    <small>This website and image were generated with the AI assistance of Microsoft CoPilot</small>
+                    <small>{t('companyCard.aiWarning')}</small>
                 </p>
                 <p>
-                    <small>We don't use cookies</small>
+                    <small>{t('companyCard.cookiesWarning')}</small>
                 </p>
             </Card.Footer>
         </Card>

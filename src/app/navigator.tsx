@@ -6,6 +6,7 @@ import HomePage from './home-page/home-page';
 import ContactPage from './contact-page/contact-page';
 import { useTheme } from './color-theme/theme-context';
 import FeedbackPage from './feedback-page/feedback-page';
+import { useTranslation } from 'react-i18next';
 
 interface TitleMapping {
     [key: string]: string;
@@ -13,17 +14,18 @@ interface TitleMapping {
 
 const usePageTitle = () => {
     const location = useLocation();
-    const appName = process.env.REACT_APP_COMPANY_NAME ?? 'Company Name';
+    const { t } = useTranslation();
+    const companyName = process.env.REACT_APP_COMPANY_NAME ?? '';
 
     useEffect(() => {
         const titles: TitleMapping = {
-            '/': `Home | ${appName}`,
-            '/feedback': `Feedback | ${appName}`,
-            '/contact': `Contact | ${appName}`,
+            '/': `${t('navigationBar.home')} | ${companyName}`,
+            '/feedback': `${t('navigationBar.feedback')} | ${companyName}`,
+            '/contact': `${t('navigationBar.contact')} | ${companyName}`,
         };
 
-        document.title = titles[location.pathname] || appName;
-    }, [appName, location]);
+        document.title = titles[location.pathname] || companyName;
+    }, [companyName, location]);
 };
 
 const Navigator: React.FC = () => {

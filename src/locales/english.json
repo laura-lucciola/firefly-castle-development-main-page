@@ -1,0 +1,23 @@
+{
+    "common": {
+        "comingSoon": "Coming Soon!",
+        "logoAlt": "{{companyName}} company logo"
+    },
+    "navigationBar": {
+        "home": "Home",
+        "feedback": "Feedback",
+        "contact": "Contact"
+    },
+    "companyCard": {
+        "header": "Welcome to {{companyName}}",
+        "subtitle": "Delivering quality since 2024",
+        "description": "We are a software consulting company specializing in cutting-edge solutions for businesses in the United Kingdom.",
+        "aiWarning": "This website and image were generated with the AI assistance of Microsoft CoPilot",
+        "cookiesWarning": "We don't use cookies"
+    },
+    "personalCard": {
+        "header": "Who am I?",
+        "subtitle": "Laura Lucciola",
+        "description": "Driven Senior Software Engineer on a continuous journey for growth. An adaptable, hard-working, organized, and reliable software engineer eager to learn from other cultures and people from different backgrounds. I am passionate about using technology to improve people's lives and enhance my skills in the process."
+    }
+}
