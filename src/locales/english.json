@@ -3,6 +3,12 @@
         "comingSoon": "Coming Soon!",
         "logoAlt": "{{companyName}} company logo"
     },
+    "validation": {
+        "required": "{{field}} is required",
+        "email": "Enter a valid email address",
+        "min": "{{field}} must be at least {{value}} characters",
+        "max": "{{field}} must be at most {{value}} characters"
+    },
     "navigationBar": {
         "home": "Home",
         "feedback": "Feedback",
@@ -14,6 +20,25 @@
         "description": "We are a software consulting company specializing in cutting-edge solutions for businesses in the United Kingdom.",
         "aiWarning": "This website and image were generated with the AI assistance of Microsoft CoPilot",
         "cookiesWarning": "We don't use cookies"
+    },
+    "contactForm": {
+        "emailAddress": {
+            "label": "Email Address",
+            "placeholder": "Enter your email address"
+        },
+        "emailSubject": {
+            "label": "Email Subject",
+            "placeholder": "Enter the email subject"
+        },
+        "message": {
+            "label": "Message",
+            "placeholder": "Enter the message"
+        }
+    },
+    "contactCard": {
+        "header": "Contact Us",
+        "marketingWarning": "We do not share your email address or send marketing emails",
+        "submit": "Send"
     },
     "personalCard": {
         "header": "Who am I?",

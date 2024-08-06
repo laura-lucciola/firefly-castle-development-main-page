@@ -3,6 +3,12 @@
         "comingSoon": "Em Breve!",
         "logoAlt": "Logotipo da empresa {{companyName}}"
     },
+    "validation": {
+        "required": "{{field}} é obrigatório",
+        "email": "Insira um endereço de email válido",
+        "min": "{{field}} deve ter pelo menos {{value}} caracteres",
+        "max": "{{field}} deve ter no máximo {{value}} caracteres"
+    },
     "navigationBar": {
         "home": "Início",
         "feedback": "Feedback",
@@ -14,6 +20,25 @@
         "description": "Somos uma empresa de consultoria em software especializada em soluções inovadoras para empresas no Reino Unido.",
         "aiWarning": "Este site e a imagem foram gerados com a assistência de IA do Microsoft CoPilot",
         "cookiesWarning": "Não usamos cookies"
+    },
+    "contactForm": {
+        "emailAddress": {
+            "label": "Endereço de Email",
+            "placeholder": "Digite seu endereço de email"
+        },
+        "emailSubject": {
+            "label": "Assunto do Email",
+            "placeholder": "Digite o assunto do email"
+        },
+        "message": {
+            "label": "Mensagem",
+            "placeholder": "Digite a mensagem"
+        }
+    },
+    "contactCard": {
+        "header": "Contate-Nos",
+        "marketingWarning": "Nós não compartilhamos seu endereço de email ou enviamos emails de marketing",
+        "submit": "Enviar"
     },
     "personalCard": {
         "header": "Quem sou eu?",
