@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 import { useTranslation } from 'react-i18next';
-import { ContactFormType } from './contact-form-type';
+import { ContactFormValues } from './contact-form-values';
 
 export const getContactFormSchema = () => {
     const { t } = useTranslation();
@@ -8,7 +8,7 @@ export const getContactFormSchema = () => {
     const MAX_EMAIL_LENGTH = 150;
     const MAX_MESSAGE_LENGTH = 5000;
 
-    const schema: yup.ObjectSchema<ContactFormType> = yup.object().shape({
+    const schema: yup.ObjectSchema<ContactFormValues> = yup.object().shape({
         emailAddress: yup
             .string()
             .required(t('validation.required', { field: t('contactForm.emailAddress.label') }))

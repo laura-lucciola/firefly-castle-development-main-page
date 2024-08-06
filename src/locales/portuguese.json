@@ -38,7 +38,11 @@
     "contactCard": {
         "header": "Contate-Nos",
         "marketingWarning": "Nós não compartilhamos seu endereço de email ou enviamos emails de marketing",
-        "submit": "Enviar"
+        "submit": "Enviar",
+        "emailAlert": {
+            "success": "Email enviado com sucesso!",
+            "danger": "Erro ao enviar email, tente novamente mais tarde!"
+        }
     },
     "personalCard": {
         "header": "Quem sou eu?",

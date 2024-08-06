@@ -3,21 +3,21 @@ import { useTranslation } from 'react-i18next';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { Formik } from 'formik';
 import getContactFormSchema from './get-contact-form-schema';
-import { sendContactEmail } from './send-contact-email';
+import { ContactFormValues, EmptyContactFormValues } from './contact-form-values';
 
-const ContactForm: React.FC = () => {
+interface ContactFormProps {
+    onSubmit: (values: ContactFormValues) => void;
+}
+
+const ContactForm: React.FC<ContactFormProps> = props => {
     const { t } = useTranslation();
     const schema = getContactFormSchema();
 
     return (
         <Formik
             validationSchema={schema}
-            onSubmit={ev => sendContactEmail(ev)}
-            initialValues={{
-                emailAddress: '',
-                emailSubject: '',
-                message: '',
-            }}
+            onSubmit={values => props.onSubmit(values)}
+            initialValues={EmptyContactFormValues}
         >
             {({ handleSubmit, handleChange, values, touched, errors }) => (
                 <Form noValidate onSubmit={handleSubmit}>
