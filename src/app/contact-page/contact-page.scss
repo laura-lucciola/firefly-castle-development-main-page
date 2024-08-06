@@ -1,0 +1,16 @@
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .contact-card {
+        max-width: 100vh;
+        max-height: 200vh;
+    }
+
+    .contact-email-alert {
+        max-width: 100vh;
+        margin: 1rem;
+        padding: 1rem;
+    }
+}

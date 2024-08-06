@@ -1,6 +1,7 @@
 {
     "common": {
         "comingSoon": "Coming Soon!",
+        "loading": "Loading...",
         "logoAlt": "{{companyName}} company logo"
     },
     "validation": {
