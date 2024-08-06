@@ -18,7 +18,7 @@ function NavigationBar() {
 
     return (
         <Navbar className={`${theme}`}>
-            <Container id="nav-items-container" className="nav-items-container">
+            <Container id="nav-items-container" className="nav-items-container" fluid="lg">
                 <Navbar.Brand href="/">
                     <img
                         src={logo}
@@ -38,7 +38,7 @@ function NavigationBar() {
                     </Nav.Link>
                 </Nav>
             </Container>
-            <Container id="nav-translation-container" className="nav-translation-container">
+            <Container id="nav-translation-container" className="nav-translation-container" fluid="sm">
                 {i18n.resolvedLanguage && (
                     <NavDropdown
                         title={
@@ -56,22 +56,20 @@ function NavigationBar() {
                                 id="nav-translation-dropdown-item"
                                 className="nav-translation-dropdown-item"
                             >
-                                <Button
-                                    key={lng}
+                                <p
                                     style={{
                                         fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal',
                                     }}
-                                    type="submit"
                                     onClick={() => i18n.changeLanguage(lng)}
                                 >
                                     {LocaleFlags[lng].flag} {LocaleFlags[lng].nativeName}
-                                </Button>
+                                </p>
                             </NavDropdown.Item>
                         ))}
                     </NavDropdown>
                 )}
             </Container>
-            <Container id="nav-theme-container" className="nav-theme-container">
+            <Container id="nav-theme-container" className="nav-theme-container" fluid="sm">
                 <Button className={`${theme}`} onClick={toggleTheme}>
                     {theme === 'light' ? <FontAwesomeIcon icon={faMoon} /> : <FontAwesomeIcon icon={faSun} />}
                 </Button>

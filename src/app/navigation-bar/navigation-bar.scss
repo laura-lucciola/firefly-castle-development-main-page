@@ -17,10 +17,16 @@
     .nav-theme-container {
         display: flex;
         justify-content: flex-end;
+        max-width: fit-content;
     }
 
     .nav-translation-container {
         display: flex;
         justify-content: flex-end;
+        max-width: fit-content;
+
+        .nav-translation-dropdown .dropdown-menu {
+            background-color: var(--primary);
+        }
     }
 }
