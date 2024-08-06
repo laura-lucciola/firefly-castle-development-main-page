@@ -9,6 +9,7 @@
 * [Sass](https://sass-lang.com/)
 * [Formik](https://formik.org/)
 * [Yup](https://www.npmjs.com/package/yup)
+* [EmailJS](https://www.emailjs.com/)
 * [Font Awesome](https://fontawesome.com/)
 * [React Bootstrap](https://react-bootstrap.github.io/)
 * [React i18n](https://react.i18next.com/)

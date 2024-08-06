@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../color-theme/theme-context';
 import { Button, Card, Col, Form, Row } from 'react-bootstrap';
+import emailjs from '@emailjs/browser';
 import * as formik from 'formik';
 import * as yup from 'yup';
 
@@ -11,6 +12,9 @@ function ContactPage() {
     const MIN_LENGTH = 1;
     const MAX_EMAIL_LENGTH = 150;
     const MAX_MESSAGE_LENGTH = 5000;
+    const serviceID = process.env.REACT_APP_EMAIL_SERVICE_ID;
+    const templateID = process.env.REACT_APP_EMAIL_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAIL_PUBLIC_KEY;
 
     const schema = yup.object().shape({
         emailAddress: yup
@@ -40,6 +44,30 @@ function ContactPage() {
             ),
     });
 
+    const onHandleSubmit = (ev: { emailAddress: string; emailSubject: string; message: string }) => {
+        console.log('onHandleSubmit');
+        console.log(ev);
+        if (serviceID && templateID) {
+            const templateParams = {
+                emailAddress: ev.emailAddress,
+                emailSubject: ev.emailSubject,
+                message: ev.message,
+            };
+            emailjs.send(serviceID, templateID, templateParams, publicKey).then(
+                result => {
+                    console.log(result);
+                    console.log(result.text);
+                    console.log(result.status);
+                    console.log('message sent!');
+                },
+                error => {
+                    console.log(error);
+                    console.log('error sending message, try again!');
+                }
+            );
+        }
+    };
+
     return (
         <Card id="contact-card" className={`${theme} contact-card`}>
             <Card.Header>{t('contactCard.header')}</Card.Header>
@@ -47,7 +75,7 @@ function ContactPage() {
             <Card.Body>
                 <Formik
                     validationSchema={schema}
-                    onSubmit={console.log}
+                    onSubmit={ev => onHandleSubmit(ev)}
                     initialValues={{
                         emailAddress: '',
                         emailSubject: '',
