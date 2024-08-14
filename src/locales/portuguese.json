@@ -49,5 +49,14 @@
         "header": "Quem sou eu?",
         "subtitle": "Laura Lucciola",
         "description": "Engenheira de Software Sênior dedicada em uma jornada contínua de crescimento. Uma engenheira de software adaptável, trabalhadora, organizada e confiável, ansiosa para aprender com outras culturas e pessoas de diferentes origens. Sou apaixonada por usar a tecnologia para melhorar a vida das pessoas e aprimorar minhas habilidades no processo."
+    },
+    "clientFeedbackCard": {
+        "meetMargo": {
+            "header": "Meet Margo",
+            "imageLink": "https://media.licdn.com/dms/image/C4E0BAQHJe9_W2M2QyQ/company-logo_200_200/0/1662449673563/meet_margo_logo?e=1731542400&v=beta&t=2iZQjh3zrzF9CUn9xPIDftW_awRaAU-oaYnYuh6E3j8",
+            "link": "https://meetmargo.uk/",
+            "subtitle": "Clientes desde Maio 2024",
+            "description": "We enjoyed working with Laura on our mobile app and web interface, and her dedication and professionalism were outstanding. Despite facing challenges with our previous contractor/her employer's abrupt closure, she demonstrated remarkable resilience and professionalism. She remained focused on our project and provided exceptional support, which speaks volumes about her dedication and work ethic. Laura is a top-notch developer whose expertise and supportive attitude greatly contributed to us being able to launch our app successfully."
+        }
     }
 }

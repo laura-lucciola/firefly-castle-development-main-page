@@ -49,5 +49,14 @@
         "header": "Who am I?",
         "subtitle": "Laura Lucciola",
         "description": "Driven Senior Software Engineer on a continuous journey for growth. An adaptable, hard-working, organized, and reliable software engineer eager to learn from other cultures and people from different backgrounds. I am passionate about using technology to improve people's lives and enhance my skills in the process."
+    },
+    "clientFeedbackCard": {
+        "meetMargo": {
+            "header": "Meet Margo",
+            "imageLink": "https://media.licdn.com/dms/image/C4E0BAQHJe9_W2M2QyQ/company-logo_200_200/0/1662449673563/meet_margo_logo?e=1731542400&v=beta&t=2iZQjh3zrzF9CUn9xPIDftW_awRaAU-oaYnYuh6E3j8",
+            "link": "https://meetmargo.uk/",
+            "subtitle": "Client since May 2024",
+            "description": "We enjoyed working with Laura on our mobile app and web interface, and her dedication and professionalism were outstanding. Despite facing challenges with our previous contractor/her employer's abrupt closure, she demonstrated remarkable resilience and professionalism. She remained focused on our project and provided exceptional support, which speaks volumes about her dedication and work ethic. Laura is a top-notch developer whose expertise and supportive attitude greatly contributed to us being able to launch our app successfully."
+        }
     }
 }
