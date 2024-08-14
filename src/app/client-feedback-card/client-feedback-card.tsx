@@ -27,9 +27,16 @@ const ClientFeedbackCard: React.FC<ClientFeedbackCardProps> = (props: ClientFeed
             <Card.Subtitle id="client-feedback-subtitle">
                 {t(`clientFeedbackCard.${props.clientName}.subtitle`)}
             </Card.Subtitle>
+            <Card.Img
+                className="client-feedback-logo-image"
+                variant="top"
+                src={t(`clientFeedbackCard.${props.clientName}.imageLink`)}
+                alt={t('common.logoAlt', { companyName: t(`clientFeedbackCard.${props.clientName}.header`) })}
+            />
+
             <Card.Body>
                 <Card.Text id="client-feedback-text">
-                    {t(`clientFeedbackCard.${props.clientName}.description`)}
+                    &quot;{t(`clientFeedbackCard.${props.clientName}.description`)}&quot;
                 </Card.Text>
             </Card.Body>
         </Card>
