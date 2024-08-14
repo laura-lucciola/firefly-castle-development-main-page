@@ -33,7 +33,7 @@ export function CompanyCard() {
                         target="_blank"
                         rel="noopener noreferrer"
                         id="github-link"
-                        className="social-link"
+                        className="card-link social-link"
                     >
                         <FontAwesomeIcon icon={faGithub} /> GitHub
                     </a>
@@ -42,7 +42,7 @@ export function CompanyCard() {
                         target="_blank"
                         rel="noopener noreferrer"
                         id="gitlab-link"
-                        className="social-link"
+                        className="card-link social-link"
                     >
                         <FontAwesomeIcon icon={faGitlab} /> GitLab
                     </a>
@@ -51,7 +51,7 @@ export function CompanyCard() {
                         target="_blank"
                         rel="noopener noreferrer"
                         id="linkedin-link"
-                        className="social-link"
+                        className="card-link social-link"
                     >
                         <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
                     </a>
@@ -60,7 +60,7 @@ export function CompanyCard() {
                         target="_blank"
                         rel="noopener noreferrer"
                         id="dev-link"
-                        className="social-link"
+                        className="card-link social-link"
                     >
                         <FontAwesomeIcon icon={faDev} /> Dev.to
                     </a>

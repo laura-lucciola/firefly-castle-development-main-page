@@ -1,11 +1,9 @@
-import { useTranslation } from 'react-i18next';
+import ClientFeedbackCard from '../client-feedback-card/client-feedback-card';
 
 function FeedbackPage() {
-    const { t } = useTranslation();
-
     return (
-        <div>
-            <p>{t('common.comingSoon')}</p>
+        <div id="feedback-page" className="feedback-page">
+            <ClientFeedbackCard clientName="meetMargo"></ClientFeedbackCard>
         </div>
     );
 }
