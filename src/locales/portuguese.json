@@ -58,5 +58,9 @@
             "subtitle": "Clientes desde Maio 2024",
             "description": "We enjoyed working with Laura on our mobile app and web interface, and her dedication and professionalism were outstanding. Despite facing challenges with our previous contractor/her employer's abrupt closure, she demonstrated remarkable resilience and professionalism. She remained focused on our project and provided exceptional support, which speaks volumes about her dedication and work ethic. Laura is a top-notch developer whose expertise and supportive attitude greatly contributed to us being able to launch our app successfully."
         }
+    },
+    "notActiveAlert": {
+        "header": "{{companyName}} não está ativa",
+        "description": "Pedimos desculpas, mas a {{companyName}} atualmente não está ativa e não está aceitando novos clientes."
     }
 }
