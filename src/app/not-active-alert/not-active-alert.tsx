@@ -9,9 +9,13 @@ export function NotActiveAlert() {
     const companyName = process.env.REACT_APP_COMPANY_NAME;
 
     return (
-        <Alert variant="info" id="not-active-alert" className={`${theme} not-active-alert`}>
-            <Alert.Heading>{t('notActiveAlert.header', { companyName: companyName })}</Alert.Heading>
-            <p>{t('notActiveAlert.description', { companyName: companyName })}</p>
-        </Alert>
+        <div>
+            {process.env.REACT_APP_COMPANY_IS_ACTIVE && (
+                <Alert variant="info" id="not-active-alert" className={`${theme} not-active-alert`}>
+                    <Alert.Heading>{t('notActiveAlert.header', { companyName: companyName })}</Alert.Heading>
+                    <p>{t('notActiveAlert.description', { companyName: companyName })}</p>
+                </Alert>
+            )}
+        </div>
     );
 }
