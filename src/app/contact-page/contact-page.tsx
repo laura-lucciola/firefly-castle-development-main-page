@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { ContactFormValues } from '../contact-form/contact-form-values';
 import { sendContactEmail } from './send-contact-email';
 import './contact-page.scss';
+import { NotActiveAlert } from '../not-active-alert/not-active-alert';
 
 function ContactPage() {
     const { t } = useTranslation();
@@ -34,6 +35,8 @@ function ContactPage() {
 
     return (
         <div id="contact-page" className="contact-page">
+            <NotActiveAlert></NotActiveAlert>
+
             <Card id="contact-card" className={`${theme} contact-card`}>
                 <Card.Header>{t('contactCard.header')}</Card.Header>
 
