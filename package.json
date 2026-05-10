@@ -29,7 +29,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "deploy": "npm run build && wrangler pages deploy ./build",
+    "deploy": "npm run build && wrangler pages deploy ./dist",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "prettier": "prettier --check src",
