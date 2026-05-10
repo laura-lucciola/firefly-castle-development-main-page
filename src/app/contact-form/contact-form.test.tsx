@@ -1,18 +1,19 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 import ContactForm from './contact-form';
 import { ContactFormValues } from './contact-form-values';
 
 // Mock modules
-jest.mock('react-i18next', () => ({
+vi.mock('react-i18next', () => ({
     useTranslation: () => ({
         t: (key: string) => key,
     }),
 }));
 
 describe('ContactForm Component', () => {
-    const mockOnSubmit = jest.fn();
+    const mockOnSubmit = vi.fn();
 
     beforeEach(() => {
         mockOnSubmit.mockClear();

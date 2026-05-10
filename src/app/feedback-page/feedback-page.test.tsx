@@ -1,13 +1,14 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import FeedbackPage from './feedback-page';
 
 // Mock modules
-jest.mock('../client-feedback-card/client-feedback-card', () => {
-    return function MockClientFeedbackCard() {
+vi.mock('../client-feedback-card/client-feedback-card', () => ({
+    default: function MockClientFeedbackCard() {
         return <div data-testid="client-feedback-card-mock">ClientFeedbackCard</div>;
-    };
-});
+    },
+}));
 
 describe('FeedbackPage Component', () => {
     it('renders without crashing', () => {

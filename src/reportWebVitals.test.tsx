@@ -1,8 +1,9 @@
+import { vi } from 'vitest';
 import reportWebVitals from './reportWebVitals';
 
 describe('reportWebVitals', () => {
     it('should not error if callback is provided', () => {
-        const mockCallback = jest.fn();
+        const mockCallback = vi.fn();
         expect(() => reportWebVitals(mockCallback)).not.toThrow();
     });
 

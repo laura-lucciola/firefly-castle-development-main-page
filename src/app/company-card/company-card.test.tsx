@@ -1,29 +1,23 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import { CompanyCard } from './company-card';
 
 // Mock modules
-jest.mock('../color-theme/theme-context', () => ({
+vi.mock('../color-theme/theme-context', () => ({
     useTheme: () => ({ theme: 'dark' }),
 }));
 
-jest.mock('react-i18next', () => ({
+vi.mock('react-i18next', () => ({
     useTranslation: () => ({
         t: (key: string, options?: any) => key,
     }),
 }));
 
-jest.mock('../../assets/company-logo.svg', () => 'logo.svg');
+vi.mock('../../assets/company-logo.svg', () => ({
+    default: 'logo.svg',
+}));
 
 describe('CompanyCard Component', () => {
-    beforeEach(() => {
-        delete (process.env as any).VITE_COMPANY_NAME;
-        delete (process.env as any).VITE_GITHUB_URL;
-        delete (process.env as any).VITE_GITLAB_URL;
-        delete (process.env as any).VITE_LINKEDIN_URL;
-        delete (process.env as any).VITE_DEV_URL;
-    });
-
     it('renders without crashing', () => {
         const { container } = render(<CompanyCard />);
         expect(container.querySelector('#company-card')).toBeInTheDocument();

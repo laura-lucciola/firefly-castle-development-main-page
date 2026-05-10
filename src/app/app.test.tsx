@@ -1,20 +1,21 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import App from './app';
 
 // Mock modules
-jest.mock('./navigator', () => ({
+vi.mock('./navigator', () => ({
     __esModule: true,
     default: () => <div data-testid="navigator-mock">Navigator</div>,
 }));
 
-jest.mock('./color-theme/theme-context', () => ({
+vi.mock('./color-theme/theme-context', () => ({
     ThemeProvider: ({ children }: { children: React.ReactNode }) => (
         <div data-testid="theme-provider-mock">{children}</div>
     ),
 }));
 
-jest.mock('../locales/i18n', () => ({
+vi.mock('../locales/i18n', () => ({
     __esModule: true,
     default: {},
 }));

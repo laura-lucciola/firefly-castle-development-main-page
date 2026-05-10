@@ -1,34 +1,33 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import NavigationBar from './navigation-bar';
 import { BrowserRouter } from 'react-router-dom';
 
 // Mock modules
-jest.mock('../color-theme/theme-context', () => ({
-    useTheme: () => ({ theme: 'dark', toggleTheme: jest.fn() }),
+vi.mock('../color-theme/theme-context', () => ({
+    useTheme: () => ({ theme: 'dark', toggleTheme: vi.fn() }),
 }));
 
-jest.mock('react-i18next', () => ({
+vi.mock('react-i18next', () => ({
     useTranslation: () => ({
         t: (key: string, options?: any) => key,
         i18n: {
             language: 'en-GB',
             resolvedLanguage: 'en-GB',
-            changeLanguage: jest.fn(),
+            changeLanguage: vi.fn(),
         },
     }),
 }));
 
-jest.mock('../../locales/locale-flag', () => ({
-    'en-GB': { flag: '🇬🇧', nativeName: 'English' },
-    'pt-BR': { flag: '🇧🇷', nativeName: 'Português' },
+vi.mock('../../locales/locale-flag', () => ({
+    default: {
+        'en-GB': { flag: '🇬🇧', nativeName: 'English' },
+        'pt-BR': { flag: '🇧🇷', nativeName: 'Português' },
+    },
 }));
 
 describe('NavigationBar Component', () => {
-    beforeEach(() => {
-        delete (process.env as any).VITE_COMPANY_NAME;
-    });
-
     it('renders without crashing', () => {
         render(
             <BrowserRouter>

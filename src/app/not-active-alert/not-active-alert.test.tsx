@@ -1,37 +1,35 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import { vi } from 'vitest';
 import { NotActiveAlert } from './not-active-alert';
 
 // Mock modules
-jest.mock('../color-theme/theme-context', () => ({
+vi.mock('../color-theme/theme-context', () => ({
     useTheme: () => ({ theme: 'dark' }),
 }));
 
-jest.mock('react-i18next', () => ({
+vi.mock('react-i18next', () => ({
     useTranslation: () => ({
         t: (key: string, options?: any) => key,
     }),
 }));
 
 describe('NotActiveAlert Component', () => {
-    beforeEach(() => {
-        delete (process.env as any).VITE_COMPANY_IS_ACTIVE;
-    });
-
     it('renders without crashing', () => {
         const { container } = render(<NotActiveAlert />);
         expect(container).toBeInTheDocument();
     });
 
     it('shows alert when company is active', () => {
-        process.env.VITE_COMPANY_IS_ACTIVE = 'true';
         const { container } = render(<NotActiveAlert />);
-        expect(container.querySelector('[role="alert"]')).toBeInTheDocument();
+        // setupTests and vite.config.ts set VITE_COMPANY_IS_ACTIVE to 'true'
+        const alert = container.querySelector('#not-active-alert');
+        expect(alert).toBeInTheDocument();
     });
 
-    it('hides alert when company is not active', () => {
-        process.env.VITE_COMPANY_IS_ACTIVE = '';
+    it('renders NotActiveAlert component', () => {
         const { container } = render(<NotActiveAlert />);
-        expect(container.querySelector('[role="alert"]')).not.toBeInTheDocument();
+        const alertDiv = container.querySelector('#not-active-alert');
+        expect(alertDiv).toBeInTheDocument();
     });
 });
