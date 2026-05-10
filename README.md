@@ -13,4 +13,4 @@
 -   [Font Awesome](https://fontawesome.com/)
 -   [React Bootstrap](https://react-bootstrap.github.io/)
 -   [React i18n](https://react.i18next.com/)
--   [Create React App](https://github.com/facebook/create-react-app)
+-   [Vite](https://vite.dev/)
