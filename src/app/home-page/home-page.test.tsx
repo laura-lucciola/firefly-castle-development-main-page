@@ -1,17 +1,18 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import HomePage from './home-page';
 
 // Mock modules
-jest.mock('../company-card/company-card', () => ({
+vi.mock('../company-card/company-card', () => ({
     CompanyCard: () => <div data-testid="company-card-mock">CompanyCard</div>,
 }));
 
-jest.mock('../personal-card/personal-card', () => ({
+vi.mock('../personal-card/personal-card', () => ({
     PersonalCard: () => <div data-testid="personal-card-mock">PersonalCard</div>,
 }));
 
-jest.mock('../not-active-alert/not-active-alert', () => ({
+vi.mock('../not-active-alert/not-active-alert', () => ({
     NotActiveAlert: () => <div data-testid="not-active-alert-mock">NotActiveAlert</div>,
 }));
 

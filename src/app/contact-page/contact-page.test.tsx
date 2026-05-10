@@ -1,29 +1,30 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
+import { vi } from 'vitest';
 import ContactPage from './contact-page';
 
 // Mock modules
-jest.mock('../color-theme/theme-context', () => ({
+vi.mock('../color-theme/theme-context', () => ({
     useTheme: () => ({ theme: 'dark' }),
 }));
 
-jest.mock('react-i18next', () => ({
+vi.mock('react-i18next', () => ({
     useTranslation: () => ({
         t: (key: string) => key,
     }),
 }));
 
-jest.mock('../contact-form/contact-form', () => {
-    return function MockContactForm() {
+vi.mock('../contact-form/contact-form', () => ({
+    default: function MockContactForm() {
         return <form data-testid="contact-form-mock">Contact Form</form>;
-    };
-});
-
-jest.mock('./send-contact-email', () => ({
-    sendContactEmail: jest.fn(() => Promise.resolve()),
+    },
 }));
 
-jest.mock('../not-active-alert/not-active-alert', () => ({
+vi.mock('./send-contact-email', () => ({
+    sendContactEmail: vi.fn(() => Promise.resolve()),
+}));
+
+vi.mock('../not-active-alert/not-active-alert', () => ({
     NotActiveAlert: () => <div data-testid="not-active-alert-mock">Alert</div>,
 }));
 

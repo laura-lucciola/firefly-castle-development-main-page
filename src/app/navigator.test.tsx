@@ -1,34 +1,35 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import Navigator from './navigator';
 import { BrowserRouter } from 'react-router-dom';
 
 // Mock modules
-jest.mock('./navigation-bar/navigation-bar', () => ({
+vi.mock('./navigation-bar/navigation-bar', () => ({
     __esModule: true,
     default: () => <div data-testid="navigation-bar-mock">NavigationBar</div>,
 }));
 
-jest.mock('./home-page/home-page', () => ({
+vi.mock('./home-page/home-page', () => ({
     __esModule: true,
     default: () => <div data-testid="home-page-mock">HomePage</div>,
 }));
 
-jest.mock('./contact-page/contact-page', () => ({
+vi.mock('./contact-page/contact-page', () => ({
     __esModule: true,
     default: () => <div data-testid="contact-page-mock">ContactPage</div>,
 }));
 
-jest.mock('./feedback-page/feedback-page', () => ({
+vi.mock('./feedback-page/feedback-page', () => ({
     __esModule: true,
     default: () => <div data-testid="feedback-page-mock">FeedbackPage</div>,
 }));
 
-jest.mock('./color-theme/theme-context', () => ({
-    useTheme: () => ({ theme: 'dark', toggleTheme: jest.fn() }),
+vi.mock('./color-theme/theme-context', () => ({
+    useTheme: () => ({ theme: 'dark', toggleTheme: vi.fn() }),
 }));
 
-jest.mock('react-i18next', () => ({
+vi.mock('react-i18next', () => ({
     useTranslation: () => ({
         t: (key: string) => key,
         i18n: { language: 'en-GB' },
@@ -36,10 +37,6 @@ jest.mock('react-i18next', () => ({
 }));
 
 describe('Navigator Component', () => {
-    beforeEach(() => {
-        delete (process.env as any).VITE_COMPANY_NAME;
-    });
-
     it('renders without crashing', () => {
         render(
             <BrowserRouter>

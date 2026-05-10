@@ -1,8 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 
 // Mock the component before importing to avoid require.context issues
-jest.mock('./client-feedback-card');
+vi.mock('./client-feedback-card');
 import ClientFeedbackCard from './client-feedback-card';
 
 describe('ClientFeedbackCard Component', () => {

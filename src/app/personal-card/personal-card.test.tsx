@@ -1,13 +1,14 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import { PersonalCard } from './personal-card';
 
 // Mock modules
-jest.mock('../color-theme/theme-context', () => ({
+vi.mock('../color-theme/theme-context', () => ({
     useTheme: () => ({ theme: 'dark' }),
 }));
 
-jest.mock('react-i18next', () => ({
+vi.mock('react-i18next', () => ({
     useTranslation: () => ({
         t: (key: string) => key,
     }),
