@@ -26,7 +26,7 @@ jest.mock('../../locales/locale-flag', () => ({
 
 describe('NavigationBar Component', () => {
     beforeEach(() => {
-        delete (process.env as any).REACT_APP_COMPANY_NAME;
+        delete (process.env as any).VITE_COMPANY_NAME;
     });
 
     it('renders without crashing', () => {

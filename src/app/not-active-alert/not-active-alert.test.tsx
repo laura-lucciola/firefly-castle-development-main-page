@@ -15,7 +15,7 @@ jest.mock('react-i18next', () => ({
 
 describe('NotActiveAlert Component', () => {
     beforeEach(() => {
-        delete (process.env as any).REACT_APP_COMPANY_IS_ACTIVE;
+        delete (process.env as any).VITE_COMPANY_IS_ACTIVE;
     });
 
     it('renders without crashing', () => {
@@ -24,13 +24,13 @@ describe('NotActiveAlert Component', () => {
     });
 
     it('shows alert when company is active', () => {
-        process.env.REACT_APP_COMPANY_IS_ACTIVE = 'true';
+        process.env.VITE_COMPANY_IS_ACTIVE = 'true';
         const { container } = render(<NotActiveAlert />);
         expect(container.querySelector('[role="alert"]')).toBeInTheDocument();
     });
 
     it('hides alert when company is not active', () => {
-        process.env.REACT_APP_COMPANY_IS_ACTIVE = '';
+        process.env.VITE_COMPANY_IS_ACTIVE = '';
         const { container } = render(<NotActiveAlert />);
         expect(container.querySelector('[role="alert"]')).not.toBeInTheDocument();
     });

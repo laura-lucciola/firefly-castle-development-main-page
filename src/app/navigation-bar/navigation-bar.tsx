@@ -14,7 +14,7 @@ import LocaleFlags from '../../locales/locale-flag';
 function NavigationBar() {
     const { theme, toggleTheme } = useTheme();
     const { i18n, t } = useTranslation();
-    const companyName = process.env.REACT_APP_COMPANY_NAME;
+    const companyName = import.meta.env.VITE_COMPANY_NAME ?? '';
 
     return (
         <Navbar className={`${theme}`}>

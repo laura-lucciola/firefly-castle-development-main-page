@@ -17,11 +17,11 @@ jest.mock('../../assets/company-logo.svg', () => 'logo.svg');
 
 describe('CompanyCard Component', () => {
     beforeEach(() => {
-        delete (process.env as any).REACT_APP_COMPANY_NAME;
-        delete (process.env as any).REACT_APP_GITHUB_URL;
-        delete (process.env as any).REACT_APP_GITLAB_URL;
-        delete (process.env as any).REACT_APP_LINKEDIN_URL;
-        delete (process.env as any).REACT_APP_DEV_URL;
+        delete (process.env as any).VITE_COMPANY_NAME;
+        delete (process.env as any).VITE_GITHUB_URL;
+        delete (process.env as any).VITE_GITLAB_URL;
+        delete (process.env as any).VITE_LINKEDIN_URL;
+        delete (process.env as any).VITE_DEV_URL;
     });
 
     it('renders without crashing', () => {

@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 export function CompanyCard() {
     const { theme } = useTheme();
     const { t } = useTranslation();
-    const companyName = process.env.REACT_APP_COMPANY_NAME;
+    const companyName = import.meta.env.VITE_COMPANY_NAME ?? '';
 
     return (
         <Card id="company-card" className={`${theme} company-card`}>
@@ -29,7 +29,7 @@ export function CompanyCard() {
 
                 <div id="social-links" className="social-links">
                     <a
-                        href={process.env.REACT_APP_GITHUB_URL}
+                        href={import.meta.env.VITE_GITHUB_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         id="github-link"
@@ -38,7 +38,7 @@ export function CompanyCard() {
                         <FontAwesomeIcon icon={faGithub} /> GitHub
                     </a>
                     <a
-                        href={process.env.REACT_APP_GITLAB_URL}
+                        href={import.meta.env.VITE_GITLAB_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         id="gitlab-link"
@@ -47,7 +47,7 @@ export function CompanyCard() {
                         <FontAwesomeIcon icon={faGitlab} /> GitLab
                     </a>
                     <a
-                        href={process.env.REACT_APP_LINKEDIN_URL}
+                        href={import.meta.env.VITE_LINKEDIN_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         id="linkedin-link"
@@ -56,7 +56,7 @@ export function CompanyCard() {
                         <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
                     </a>
                     <a
-                        href={process.env.REACT_APP_DEVTO_URL}
+                        href={import.meta.env.VITE_DEVTO_URL}
                         target="_blank"
                         rel="noopener noreferrer"
                         id="dev-link"
