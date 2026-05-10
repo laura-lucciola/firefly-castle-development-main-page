@@ -1,0 +1,15 @@
+version: 2
+updates:
+  # Configure for npm (TypeScript/JavaScript)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+    reviewers:
+      - "laura-lucciola"
+    auto-rebase: true
+    commit-message:
+      prefix: "chore(deps):"
