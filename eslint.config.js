@@ -22,7 +22,15 @@ export default [
     ),
     {
         files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
-        ignores: ['node_modules/**', 'build/**', 'dist/**', 'eslint.config.js', '**/*.config.js', '**/*.min.js', '**/*.chunk.js'],
+        ignores: [
+            'node_modules/**',
+            'build/**',
+            'dist/**',
+            'eslint.config.js',
+            '**/*.config.js',
+            '**/*.min.js',
+            '**/*.chunk.js',
+        ],
         plugins: {
             prettier,
             react,

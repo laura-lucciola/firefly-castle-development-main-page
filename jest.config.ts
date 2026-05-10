@@ -5,11 +5,14 @@ export default {
     testMatch: ['**/__tests__/**/*.ts?(x)', '**/?(*.)+(spec|test).ts?(x)'],
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
     transform: {
-        '^.+\\.tsx?$': ['ts-jest', {
-            tsconfig: {
-                jsx: 'react-jsx',
+        '^.+\\.tsx?$': [
+            'ts-jest',
+            {
+                tsconfig: {
+                    jsx: 'react-jsx',
+                },
             },
-        }],
+        ],
     },
     moduleNameMapper: {
         '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -17,10 +20,5 @@ export default {
     },
     setupFiles: ['<rootDir>/jest-setup.js'],
     setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
-    collectCoverageFrom: [
-        'src/**/*.{ts,tsx}',
-        '!src/**/*.d.ts',
-        '!src/index.tsx',
-        '!src/reportWebVitals.tsx',
-    ],
+    collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts', '!src/index.tsx', '!src/reportWebVitals.tsx'],
 };
