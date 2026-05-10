@@ -1,7 +1,9 @@
-// Jest setup file - runs before any tests
+// Vitest setup file - runs before any tests
 // Mock require.context for Webpack-specific features
+import { vi } from 'vitest';
+
 if (typeof require !== 'undefined') {
-    require.context = jest.fn((dir, useSubdirs, pattern) => {
+    require.context = vi.fn((dir, useSubdirs, pattern) => {
         return filename => filename;
     });
 }
