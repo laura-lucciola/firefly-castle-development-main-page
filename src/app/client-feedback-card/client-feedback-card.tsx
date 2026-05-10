@@ -3,6 +3,8 @@ import { useTheme } from '../color-theme/theme-context';
 import './client-feedback-card.scss';
 import { useTranslation } from 'react-i18next';
 
+const images = (require as any).context('../../assets', false, /\.(jpg|jpeg|png|svg)$/);
+
 interface ClientFeedbackCardProps {
     clientName: string;
 }
@@ -10,6 +12,8 @@ interface ClientFeedbackCardProps {
 const ClientFeedbackCard: React.FC<ClientFeedbackCardProps> = (props: ClientFeedbackCardProps) => {
     const { theme } = useTheme();
     const { t } = useTranslation();
+    const imageLink = t(`clientFeedbackCard.${props.clientName}.imageLink`);
+    const imageSrc = imageLink.startsWith('http') ? imageLink : images(`./${imageLink}`);
 
     return (
         <Card id="client-feedback-card" className={`${theme} client-feedback-card`}>
@@ -30,7 +34,7 @@ const ClientFeedbackCard: React.FC<ClientFeedbackCardProps> = (props: ClientFeed
             <Card.Img
                 className="client-feedback-logo-image"
                 variant="top"
-                src={t(`clientFeedbackCard.${props.clientName}.imageLink`)}
+                src={imageSrc}
                 alt={t('common.logoAlt', { companyName: t(`clientFeedbackCard.${props.clientName}.header`) })}
             />
 
