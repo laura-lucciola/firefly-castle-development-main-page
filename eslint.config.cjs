@@ -22,11 +22,17 @@ module.exports = [
     ),
     {
         files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
-        ignores: ['node_modules/**', 'build/**', 'eslint.config.cjs', '**/*.config.cjs'],
+        ignores: ['node_modules/**', 'build/**', 'dist/**', 'eslint.config.cjs', '**/*.config.cjs', '**/*.min.js', '**/*.chunk.js'],
         plugins: {
             prettier,
             react,
             '@typescript-eslint': typescriptEslint,
+        },
+
+        settings: {
+            react: {
+                version: 'detect',
+            },
         },
 
         languageOptions: {
