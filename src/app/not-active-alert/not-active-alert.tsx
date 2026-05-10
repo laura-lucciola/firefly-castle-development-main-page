@@ -6,11 +6,12 @@ import { useTranslation } from 'react-i18next';
 export function NotActiveAlert() {
     const { theme } = useTheme();
     const { t } = useTranslation();
-    const companyName = process.env.REACT_APP_COMPANY_NAME;
+    const companyName = import.meta.env.VITE_COMPANY_NAME ?? '';
+    const isCompanyActive = import.meta.env.VITE_COMPANY_IS_ACTIVE === 'true';
 
     return (
         <div>
-            {process.env.REACT_APP_COMPANY_IS_ACTIVE && (
+            {isCompanyActive && (
                 <Alert variant="info" id="not-active-alert" className={`${theme} not-active-alert`}>
                     <Alert.Heading>{t('notActiveAlert.header', { companyName: companyName })}</Alert.Heading>
                     <p>{t('notActiveAlert.description', { companyName: companyName })}</p>

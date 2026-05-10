@@ -15,7 +15,7 @@ interface TitleMapping {
 const usePageTitle = () => {
     const location = useLocation();
     const { t } = useTranslation();
-    const companyName = process.env.REACT_APP_COMPANY_NAME ?? '';
+    const companyName = import.meta.env.VITE_COMPANY_NAME ?? '';
 
     useEffect(() => {
         const titles: TitleMapping = {
